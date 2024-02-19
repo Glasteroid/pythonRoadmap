@@ -20,6 +20,16 @@ class LinkedList:
     def add_first(self, node):
         node.next = self.head
         self.head = node
+        
+    def append(self, node):
+        if self.head is None:
+            self.head = node
+            
+        last = self.head
+        while (last.next):
+            last.next = last
+            
+        last.next = node
             
     def __repr__(self):
         node = self.head
@@ -43,6 +53,8 @@ third_node = Node("c")
 first_node.next = second_node
 
 second_node.next = third_node
+
+llist.append(Node("d"))
 
 print(llist)
     
