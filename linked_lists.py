@@ -27,7 +27,7 @@ class LinkedList:
             
         last = self.head
         while (last.next):
-            last.next = last
+            last = last.next
             
         last.next = node
             
