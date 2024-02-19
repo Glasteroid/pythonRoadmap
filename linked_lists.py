@@ -17,6 +17,10 @@ class LinkedList:
             yield node
             node = node.next
             
+    def add_first(self, node):
+        node.next = self.head
+        self.head = node
+            
     def __repr__(self):
         node = self.head
         nodes = []
@@ -28,17 +32,5 @@ class LinkedList:
     
 llist = LinkedList()
 
-first_node = Node("a")
-
-llist.head = first_node 
-
-second_node = Node("b")
-
-third_node = Node("c")
-
-first_node.next = second_node
-
-second_node.next = third_node
-
-print(llist)
+first_node = add_first()
     
