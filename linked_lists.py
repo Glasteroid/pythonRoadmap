@@ -31,6 +31,17 @@ class LinkedList:
             last = last.next
             
         last.next = node
+        
+    def insert(self, prev_node, new_data):
+        if prev_node is None:
+            print("The node given is not in the linked list")
+            return
+        
+        new_node = Node(new_data)
+        
+        new_node.next = prev_node.next
+        
+        prev_node.next = new_node
             
     def __repr__(self):
         node = self.head
