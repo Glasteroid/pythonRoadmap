@@ -42,6 +42,13 @@ class LinkedList:
         new_node.next = prev_node.next
         
         prev_node.next = new_node
+        
+    def delete(self, node):
+        if node is None or node.next is None:
+            print("Cannot delete the last node or a None node.")
+        
+        node.data = node.next.data
+        node.next = node.next.next
             
     def __repr__(self):
         node = self.head
@@ -69,6 +76,8 @@ second_node.next = third_node
 llist.append(Node("d"))
 
 llist.insert(second_node, "j")
+
+llist.delete(first_node)
 
 print(llist)
     
