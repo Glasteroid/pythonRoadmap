@@ -18,8 +18,8 @@ class LinkedList:
             node = node.next
             
     def add_first(self, node):
-        node.next = self.head
-        self.head = node
+        self.head = node.next
+        node = self.head
         
     def append(self, node):
         if self.head is None:
