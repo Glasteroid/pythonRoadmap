@@ -26,10 +26,10 @@ class LinkedList:
             self.head = node
             
         last = self.head
-        while (last.next):
+        while last.next:
             last = last.next
             
-        last.next = node
+        node = last.next
             
     def __repr__(self):
         node = self.head
