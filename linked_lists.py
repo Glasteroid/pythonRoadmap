@@ -34,7 +34,7 @@ class LinkedList:
         
     def insert(self, prev_node, new_data):
         if prev_node is None:
-            print("The node given must be in the linked list")
+            print("The node given must be in the linked list.")
             return
         
         new_node = Node(new_data)
