@@ -18,8 +18,8 @@ class LinkedList:
             node = node.next
             
     def add_first(self, node):
-        self.head = node.next
-        node = self.head
+        node.next = self.head
+        self.head = node
         
     def append(self, node):
         if self.head is None:
@@ -68,7 +68,7 @@ second_node.next = third_node
 
 llist.append(Node("d"))
 
-llist.insert("b", "j")
+llist.insert(second_node, "j")
 
 print(llist)
     
