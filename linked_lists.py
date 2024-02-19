@@ -24,12 +24,13 @@ class LinkedList:
     def append(self, node):
         if self.head is None:
             self.head = node
-            
+            return
+        
         last = self.head
         while last.next:
             last = last.next
             
-        node = last.next
+        last.next = node
             
     def __repr__(self):
         node = self.head
