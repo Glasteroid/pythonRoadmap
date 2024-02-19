@@ -54,7 +54,7 @@ first_node.next = second_node
 
 second_node.next = third_node
 
-# llist.append(Node("d"))
+llist.append(Node("d"))
 
 print(llist)
     
