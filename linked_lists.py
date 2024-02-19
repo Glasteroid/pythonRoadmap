@@ -34,7 +34,7 @@ class LinkedList:
         
     def insert(self, prev_node, new_data):
         if prev_node is None:
-            print("The node given is not in the linked list")
+            print("The node given must be in the linked list")
             return
         
         new_node = Node(new_data)
@@ -67,6 +67,8 @@ first_node.next = second_node
 second_node.next = third_node
 
 llist.append(Node("d"))
+
+llist.insert("b", "j")
 
 print(llist)
     
