@@ -15,6 +15,3 @@ for t in title:
     titles.append((t.string))
     
 print(titles)
-    
-
-
