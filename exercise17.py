@@ -12,7 +12,7 @@ title = soup.find_all(class_="indicate-hover")
 titles = []
 
 for t in title:
-    titles.append(t.text)
+    titles.append((t.string))
     
 print(titles)
     
