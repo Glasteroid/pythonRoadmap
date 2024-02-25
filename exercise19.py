@@ -1,17 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://www.nytimes.com/'
+url = 'https://www.vanityfair.com/style/society/2014/06/monica-lewinsky-humiliation-culture'
 r = requests.get(url)
 r_html = r.text
 
 soup = BeautifulSoup(r_html, 'lxml')
 
-title = soup.find_all(class_="indicate-hover")
+text = soup.find_all(class_='paywall')
 
 titles = []
 
-for t in title:
+for t in text:
     titles.append(t.string)
     
 print(titles)
