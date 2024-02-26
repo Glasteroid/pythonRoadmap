@@ -10,6 +10,4 @@ def file_overlap(file1, file2):
     
     print(sorted(overlap))
     
-file_overlap('primenumbers.txt', 'happynumbers.txt')
-    
-    
+file_overlap('primenumbers.txt', 'happynumbers.txt') 
