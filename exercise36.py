@@ -1,0 +1,42 @@
+import json
+from collections import Counter
+from bokeh.plotting import figure, show, output_file
+import math
+
+with open('scientist_birthdays.json', 'r') as f:
+    birthdays = json.load(f)
+    
+num_to_string = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+}
+
+months = []
+
+for name, birthday_string in birthdays.items():
+    month = int(birthday_string.split('/')[0])
+    months.append(num_to_string[month])
+    
+months = Counter(months)
+
+output_file("plot.html")
+categories = list(num_to_string.values())
+
+months, counts = list(zip(*months.items()))
+
+p = figure(x_range=categories, title="Scientists' Birthday Months")
+p.xaxis.major_label_orientation = math.pi/4
+p.vbar(x=months, top=counts)
+
+show(p)
+    
