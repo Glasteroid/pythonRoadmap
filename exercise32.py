@@ -13,7 +13,7 @@ def end_game(guesses):
         print("Sorry, out of guesses! End of the game!")
         return True
 
-def guess_letter(word):
+def  run_game(word):
         x = []
         
         for _ in range(len(word)):
@@ -63,4 +63,4 @@ if __name__ == '__main__':
     print("Welcome to Hangman!")
     word = pick_word()
     
-    guess_letter(word)
+    run_game(word)
